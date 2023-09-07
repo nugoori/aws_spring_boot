@@ -1,0 +1,23 @@
+# spring-boot 설정 창
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_study
+    username: root
+    password: 1q2w3e4r
+
+
+mybatis:
+  mapper-locations:
+#    UserMappers - user-mapper.xml? ???? ?? ??? ??
+    - /mappers/*.xml
+
+
+
+
+
+
+
+
+
+

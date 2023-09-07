@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <h1 th:text="${title}"></h1>
+    <form method="post" action="/post/xwww"> <!-- form tag안의 submit type버튼으로 전송하는 메소드와 endpoint?-->
+        <div><input name="name" placeholder="이름"/></div>
+        <div><input name="age" placeholder="나이"/></div>
+        <button type="submit">전송</button>
+    </form>
+
 </body>
 </html>
