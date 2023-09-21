@@ -4,17 +4,21 @@ import com.aws.spring_study.dto.ModifyUserReqDto;
 import com.aws.spring_study.dto.RegisterUserReqDto;
 import com.aws.spring_study.entity.User;
 import com.aws.spring_study.repository.UserMappers;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class UsersController {
 
-    @Autowired
-    private UserMappers userMappers;
+//    @Autowired // ioc에 들어가져서 자동으로 의존성을 주입하기 위한 어노테이션 = @RequiredArgsConstructor + 상수형으로 선언된 클래스?
+//    @Qualifier("service1") //
+    private final UserMappers userMappers; // 의존성을 주입받기 위해
 
     @CrossOrigin // cros origin 관련 오류 해결 / 각각의 요청에 다 달아 줘야 함
     @PostMapping("/user")

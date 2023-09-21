@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+// myBatis : xml연결
 @Mapper
 public interface UserMappers {
     // insert, update, delete query 실행 결과는 숫자!
